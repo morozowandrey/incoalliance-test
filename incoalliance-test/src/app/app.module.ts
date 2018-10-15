@@ -5,15 +5,22 @@ import { HttpClientModule }    from '@angular/common/http';
 import { AppRoutingModule } from './/app-routing.module';
 
 import { MatButtonModule, MatCheckboxModule } from '@angular/material';
+import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ChartsModule } from 'ng2-charts';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { PageComponent } from './page/page.component';
+import { ChartComponent } from './chart/chart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    PageComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
@@ -21,11 +28,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppRoutingModule,
     MatButtonModule,
     MatCheckboxModule,
-    BrowserAnimationsModule
+    MatInputModule,
+    BrowserAnimationsModule,
+    ChartsModule
   ],
   exports: [
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

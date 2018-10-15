@@ -1,6 +1,7 @@
-<h1>
-  Welcome to {{ title }}!
-</h1>
+<h1 class="title">{{title | uppercase}}</h1>
+<nav class="navigation">
+    <a mat-button routerLink="/dashboard">Dashboard</a>
+    <a mat-button routerLink="/page">Page</a>
+</nav>
 
-<button mat-flat-button>Get</button>
-<button mat-flat-button>Post</button>
+<router-outlet></router-outlet>

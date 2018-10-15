@@ -1,1 +1,21 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.app-root {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+}
+.navigation {
+    width: 90%;
+    border: 2px solid black;
+    margin-bottom: 50px;
+}
+.dashboard {
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

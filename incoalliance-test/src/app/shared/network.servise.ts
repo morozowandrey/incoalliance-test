@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -12,19 +11,19 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class HeroService {
+export class NetworkService {
   private apiEndpoint = '';
 
   constructor(
     private http: HttpClient
   ) {}
 
-  getData (): Observable<Data[]> {
-    return this.http.get<Data[]>(this.apiEndpoint, httpOptions)
+  getData (): Promise<Data[]> {
+    return this.http.get<Data[]>(this.apiEndpoint, httpOptions).toPromise();
   }
 
-  addData (Data: Data): Observable<Data> {
-    return this.http.post<Data>(this.apiEndpoint, Data, httpOptions)
+  addData (Data: Data): Promise<Data> {
+    return this.http.post<Data>(this.apiEndpoint, Data, httpOptions).toPromise();
   }
 
 }

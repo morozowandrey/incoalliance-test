@@ -1,0 +1,11 @@
+.chart {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.chart-action {
+    width: 50%;
+}
+.mat-flat-button {
+    margin: 20px;
+}

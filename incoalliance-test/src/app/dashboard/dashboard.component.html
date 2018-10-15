@@ -1,3 +1,21 @@
-<p>
-  dashboard works!
-</p>
+<div class="chart">
+  
+  <chart></chart>
+  
+  <div class="chart-action">
+    <p>Request status: {{ this.status }}</p>
+    
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Your value" #name>
+      </mat-form-field>
+    </form>
+    
+    <div class="buttons-box">
+      <button class="button" mat-flat-button (click)="getData()">Get</button>
+      <button class="button" (click)="postData(name.value); name.value=''" mat-flat-button>Post</button>
+    </div>
+  </div>
+  
+  
+</div>
